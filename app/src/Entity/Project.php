@@ -2,12 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\GroupRepository;
+use App\Repository\ProjectRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: GroupRepository::class)]
-#[ORM\Table(name: '`group`')]
-class Group
+#[ORM\Entity(repositoryClass: ProjectRepository::class)]
+class Project
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

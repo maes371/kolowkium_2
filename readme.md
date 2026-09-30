@@ -1,21 +1,19 @@
 # Zadanie
 
-Szablon projektu został skonfigurowany na podstawie [Symfony Starter Kit](https://bitbucket.org/tchojna/docker-symfony-starter-kit/src/master/). W projekcie zostały przygotowane encje `Project`, `Task` oraz pliki pozwalające na zasilenie bazy danych losowymi danymi.
+Szablon projektu został skonfigurowany na podstawie [Symfony Starter Kit](https://bitbucket.org/tchojna/docker-symfony-starter-kit/src/master/). W projekcie zostały przygotowane encje `Contact`, `Group` oraz pliki pozwalające na zasilenie bazy danych losowymi danymi.
 
-Przygotuj mechanizm dodawania nowego zadania (encja `Task`) oraz jego porcjowane listowanie.
+Przygotuj mechanizm edycji kontaktu (encja `Contact`). 
 
-1. Formularz dodawania zadania. Pole pozwalające na wybranie projektu (`project`) oraz priorytetu (`priority`) powinno być listą rozwijaną jednokrotnego wyboru — wartości `project` pobierane z bazy danych, wartości `priority` z enuma `Priority`. Po zapisaniu rekordu do bazy danych użytkownik powinien zostać przekierowany do podglądu utworzonego zadania.
-2. Porcjowana lista zadań (`KnpPaginator`), z możliwością filtrowania po priorytecie (`priority`) i projekcie (`project`) oraz sortowania po * `title`, `dueDate`, `priority`, `project`. Pole `description` nie pojawia się na liście.
-
-Pamiętaj o walidacji danych, tłumaczeniach, komentarzach.
+Pamiętaj o walidacji danych, tłumaczeniach, komentarzach. Po zapisaniu rekordu do bazy danych użytkownik powinien zostać przekierowany do podglądu edytowanego rekordu.
 
 ## Reguły walidacji
 
-* `title` - pole wymagane o minimalnej długości 3 znaki, a maksymalnej będącej długością pola w bazie danych,
-* `description` - pole opcjonalne, maksymalna długość 1000 znaków,
-* `dueDate` - pole opcjonalne, jeżeli podane, nie może być datą przeszłą,
-* `priority` - pole wymagane,
-* `project` - pole wymagane.
+* `firstName` - pole wymagane o minimalnej długości 3 znaki, a maksymalnej będącej długością pola w bazie danych,
+* `lastName` - pole wymagane o minimalnej długości 3 znaki, a maksymalnej będącej długością pola w bazie danych,
+* `email` - pole wymagane będące poprawnym adresem email, o długości maksymalnej będącej długością pola w bazie danych,
+* `phone_number` - pole opcjonalne, numer telefonu (w formacie +48 123 456 789 lub +48 12 345 67 89),
+* `phone_number_type ` - pole wymagane, tylko i wyłącznie, wtedy gdy pole `phone_number` jest poprawnym numerem telefonu,
+* `contactGroups ` - pole pozwalające przypisać kontakt to wielu grup.
 
 ## Informacje ogólne
 * przesłana praca ma być pracą samodzielną,
